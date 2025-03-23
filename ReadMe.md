@@ -47,20 +47,28 @@ Program ini dapat melakukan:
 
     - Saat baris dalam tabel diklik, `mousePressed()` menyalin data dari tabel ke form input.    
    - Tombol **Add** berubah menjadi **Update**, dan tombol **Delete** muncul.    
-   - Jika user menekan **Update**, `updateData()` akan memperbarui data di `listMahasiswa`, memperbarui tabel, membersihkan form, dan menampilkan pesan sukses.
+   - Menekan tombol **Update** akan memanggil `updateData()` yang:
+     - Memperbarui data di `listMahasiswa`.    
+     - Memperbarui tabel dengan `setTable()`.    
+     - Mengosongkan form dengan `clearForm()`.    
+     - Menampilkan pesan sukses.
 
 4. Menghapus Data
 
     - Jika user menekan tombol **Delete**, akan muncul dialog konfirmasi.    
-   - Jika memilih Yes, `deleteData()` akan menghapus data dari `listMahasiswa`, memperbarui tabel, mengosongkan form, dan menampilkan pesan sukses.
-
+   - Jika memilih Yes, `deleteData()` akan:
+     - Menghapus data dari `listMahasiswa`.    
+     - Memperbarui tabel dengan `setTable()`.    
+     - Mengosongkan form dengan `clearForm()`.    
+     - Menampilkan pesan sukses.
+	 
 5. Membatalkan/Mereset Form
 
     - Menekan tombol Cancel akan memanggil `clearForm()`, yang:    
       - Mengosongkan semua field input.    
       - Menyembunyikan tombol **Delete**.    
       - Mengembalikan tombol **Update** menjadi **Add**.    
-      - Mengatur `selectedIndex` kembali ke -1 (tidak ada baris yang dipilih).
+      - Mengubah nilai `selectedIndex` menjadi -1 (tidak ada baris yang dipilih).
 
 # Dokumentasi
 
